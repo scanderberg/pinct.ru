@@ -1,0 +1,89 @@
+div.account-plus {
+
+margin: 30px auto 0px;
+padding: 0px;
+width: 986px;
+position: relative;
+color: rgb(124, 135, 146);
+font-family: Lato, sans-serif;
+font-size: medium;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+letter-spacing: normal;
+line-height: normal;
+orphans: auto;
+text-align: start;
+text-indent: 0px;
+text-transform: none;
+white-space: normal;
+widows: 1;
+word-spacing: 0px;
+-webkit-text-stroke-width: 0px;
+background-color: rgb(237, 237, 237);
+
+}
+
+div.columns .clearfix {
+
+margin: 0px;
+padding: 0px;
+
+}
+
+div.column {
+
+margin: 0px 14px 0px 0px;
+padding: 0px;
+float: left;
+width: 236px;
+
+}
+
+h4.title-3 .center .bgcolor-2 .color-5 .border-color-1 {
+
+margin: 0px;
+padding: 18px 0px 20px;
+font-size: 18px;
+line-height: 22px;
+font-weight: bold;
+color: rgb(255, 255, 255);
+border-color: rgb(197, 65, 51);
+text-align: center;
+border-radius: 3px 3px 0px 0px;
+border-bottom-width: 3px;
+border-bottom-style: solid;
+position: relative;
+background-color: rgb(231, 76, 60);
+
+}
+
+a.button-qmark .event-tooltip {
+
+margin: 0px 0px 0px -13px; 
+padding: 0px; 
+text-decoration: none; 
+color: rgb(102, 118, 134); 
+display: inline-block; 
+width: 26px; 
+height: 26px; 
+border: 2px solid rgb(255, 255, 255); 
+text-indent: -50000px; 
+border-radius: 50%; 
+position: absolute; 
+left: 118px; 
+bottom: -15px; 
+background-image: url(img/icon-qmark.png); 
+background-color: rgb(229, 229, 229); 
+background-position: 50% 50%; 
+background-repeat: no-repeat;
+
+}
+
+
+
+
+
+
+
+

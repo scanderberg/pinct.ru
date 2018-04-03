@@ -1,0 +1,1157 @@
+/*  шрифты  */
+
+@font-face {
+    font-family: ComicSansBold; 
+    src: url(fonts/ComicSansBold.ttf); 
+   }
+
+   @font-face {
+    font-family: ComicSansRegular; 
+    src: url(fonts/ComicSansRegular.ttf);
+   }
+   
+@font-face {
+    font-family: Consolaz;
+    src: url(fonts/consolaz.ttf);
+   }
+   
+   @font-face {
+    font-family: Century;
+    src: url(fonts/century.ttf);
+   }
+   
+@font-face {
+    font-family: helveticaneuecyrheavy; 
+    src: url(fonts/helveticaneuecyr-heavy.otf); 
+   }
+
+@font-face {
+    font-family: helveticaneuecyrthin; 
+    src: url(fonts/helveticaneuecyr-thin.otf);
+   }
+
+@font-face {
+    font-family: helveticaneuecyrlight; 
+    src: url(fonts/helveticaneuecyr-light.otf); 
+   }
+
+@font-face {
+    font-family: helveticaneuecyrmedium; 
+    src: url(fonts/helveticaneuecyr-medium.otf); 
+   }
+
+@font-face {
+    font-family: helveticaneuecyrroman; 
+    src: url(fonts/helveticaneuecyr-roman.otf); 
+   }
+
+/*  основные стили  */
+
+/*  верхнее меню  */
+
+body {
+	
+width: 100%;
+background-color: #f2f2f2;
+font: 12px ComicSansRegular, Arial, sans-serif;
+margin: 0;
+	
+}
+
+header.top-menu {
+	
+	font-size: 16px;
+	font-style: normal;
+	background-color: #FFFFFF;
+	background-repeat: repeat-x;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	height: 35px;
+	position: fixed;
+	z-index: 100;
+	width: 100%!important;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	padding-top: 4px;
+	padding-bottom: 18px;
+	
+}
+
+header.top-menu a {
+	
+	color: #FFFFFF;
+	text-decoration: none;
+
+}
+
+div#top-logo {
+
+	display: inline;
+	height: 40px;
+	position: relative;
+	
+}
+
+div#top-logo img {
+
+	padding-top: 4px;
+	
+}
+
+div#top-left {
+	
+	text-align: left;
+	vertical-align: middle;
+	display: inline;
+	height: 40px;
+	position: relative;
+	margin-left: 20px;
+	margin-top: 10px;
+	float: left;
+	
+}
+
+div#boxed-menu {
+	
+background-image: url(img/icon-menu1.png);
+background-repeat: no-repeat;
+margin-top: 15px;
+display: inline;
+cursor: pointer;
+padding-left: 15px;
+padding-right: 5px;
+
+}
+
+div#menu-users {
+	
+background-image: url(img/user1.png);
+background-repeat: no-repeat;
+margin-top: 15px;
+display: inline;
+cursor: pointer;
+padding-left: 15px;
+padding-right: 20px;
+
+}
+
+div#box-right {
+	
+	text-align: left;
+	vertical-align: middle;
+	display: inline;
+	height: 40px;
+	position: relative;
+	float: right;
+	
+}
+
+div#top-right {
+	
+	text-align: left;
+	vertical-align: middle;
+	display: inline;
+	height: 40px;
+	position: relative;
+	margin-right: 15px;
+	margin-top: 12px;
+	float: left;
+	
+}
+
+div#right-chat {
+	
+	text-align: right;
+	vertical-align: middle;
+	display: inline;
+	height: 40px;
+	position: relative;
+	margin-right: 20px;
+	margin-top: 12px;
+	float: right;
+	
+}
+
+
+
+ul.menuleft {
+	
+list-style: none;
+display: inline;
+
+}
+
+ul.menuleft li {
+	
+list-style: none;
+display: inline;
+
+}
+
+ul.menuleft li a {
+	
+display: inline;
+
+
+}
+
+ul.menuleft li:first-child {
+	
+list-style: none;
+display: inline;
+background-image: url(img/icon-menu1.png);
+background-repeat: no-repeat;
+margin-top: 15px;
+
+}
+
+ul.menuleft li:last-child {
+	
+list-style: none;
+display: inline;
+background-image: url(img/user1.png);
+background-repeat: no-repeat;
+margin-left: 5px;
+margin-right: 10px;
+
+}
+
+div #top-form {
+
+display: inline;
+
+}
+
+form#search {
+
+display: inline;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+margin-left: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-top: -3px;
+
+}
+
+input#search {
+	
+display: inline;
+position: relative;
+width: 260px;
+height: 8px;
+font: 16px ComicSansRegular, Arial, sans-serif;
+padding: 7px;
+border-radius: 5px;
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+margin-top: 0px;
+
+}
+
+input#image-search {
+	
+position: relative;
+display: inline;
+padding-top: 0px;
+padding-left: 0px;
+height: 24px;
+margin-top: 0px;
+margin-left: -33px;
+background-image: url('img/button.png');
+background-repeat: repeat-x;
+border: none;
+  border-radius: 0px 3px 3px 0px;
+  -webkit-border-radius: 0px 3px 3px 0px;
+-moz-border-radius: 0px 3px 3px 0px;
+color: white;
+border: none;
+-webkit-appearance: none;
+padding: 5px;
+cursor: pointer;
+
+}
+
+select.menuleft {
+	
+display: inline;
+width: auto!important;
+font: 16px ComicSansRegular, Arial, sans-serif;
+padding-right: 7px;
+
+
+}
+
+div#top-sort {
+
+display: inline;
+padding-left: 10px;
+padding-right: 10px;
+margin-top: 0px;
+
+}
+
+div#top-plus {
+	
+background-image: url(img/plus1.png);
+background-repeat: no-repeat;
+display: inline;
+cursor: pointer;
+padding-left: 5px;
+padding-right: 5px;
+
+}
+
+div#plus-user {
+	
+background-image: url(img/adduser1.png);
+background-repeat: no-repeat;
+display: inline;
+cursor: pointer;
+padding-left: 5px;
+padding-right: 5px;
+
+}
+
+div#top-messages {
+	
+background-image: url(img/ulet1.png);
+background-repeat: no-repeat;
+display: inline;
+cursor: pointer;
+padding-left: 5px;
+padding-right: 5px;
+
+}
+
+div#top-emal {
+	
+background-image: url(img/message1.png);
+background-repeat: no-repeat;
+display: inline;
+cursor: pointer;
+padding-left: 5px;
+padding-right: 5px;
+
+}
+
+div#right-right {
+	
+	text-align: left;
+	vertical-align: middle;
+	display: inline;
+	height: 40px;
+	position: relative;
+	margin-right: 15px;
+	margin-top: 2px;
+	float: right;
+	
+}
+
+div#top-account {
+
+display: inline;
+cursor: pointer;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
+margin-top: 0px;
+border: none;
+
+}
+
+div#top-account img  {
+
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+-moz-border-radius: 25px;
+
+}
+
+div#top-chat {
+	
+background-image: url(img/chat1.png);
+background-repeat: no-repeat;
+display: inline;
+cursor: pointer;
+padding-left: 5px;
+padding-right: 5px;
+margin-top: 0px;
+
+}
+
+
+/*  бакграунд пользователя  */
+
+div#main {
+
+
+}
+
+div#user {
+
+position: relative;
+background-image: url(img/new-york-city.jpg);
+background-repeat: repeat-x;
+background-size: cover;
+background-position: center center;
+margin-top: 80px;
+margin-bottom: 50px;
+padding-top: 40px;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 0px;
+width: 80%;
+height: 300px;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+
+}
+
+div#infa-user {
+
+font: 22px ComicSansBold, Arial, sans-serif;
+width: 400px;
+	text-align: left;
+	vertical-align: middle;
+	display: inline;
+	position: relative;
+	margin-right: 0px;
+	margin-top: 0px;
+	float: left;
+	line-height: 20px!important;
+
+}
+
+div#follow-user {
+
+font: 22px ComicSansBold, Arial, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	display: inline;
+	position: relative;
+	margin-right: 0px;
+	margin-top: 8px;
+	float: right;
+	line-height: 20px!important;
+
+}
+
+div.followuser {
+
+	text-align: center;
+	vertical-align: middle;
+	display: inline;
+	margin-right: 20px;
+	margin-top: 0px;
+	float: left;
+
+}
+
+div.followuser span {
+
+font: 16px Consolaz, Arial, sans-serif;
+
+}
+
+div.following {
+
+	text-align: center;
+	vertical-align: middle;
+	display: inline;
+	margin-right: 0px;
+	margin-top: 0px;
+	float: right;
+
+}
+
+div.following span {
+
+font: 16px Consolaz, Arial, sans-serif;
+
+}
+
+div#ava-user {
+
+	text-align: center;
+	width: 100%;
+	vertical-align: middle;
+	display: block;
+	height: 100px;
+	position: absolute;
+	margin-right: 0px;
+	bottom: -2px;
+	clear: none;
+	margin-left: -4%;
+
+}
+
+div#ava-user img {
+
+	margin-top: 45px;
+	  border-radius: 50px;
+  -webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+
+}
+
+span.name-user {
+
+font: 22px ComicSansBold, Arial, sans-serif;
+padding-right: 5px;
+line-height: 40px!important;
+
+}
+
+span.city {
+
+font: 22px ComicSansBold, Arial, sans-serif;
+padding-left: 25px;
+background-image: url(img/pin3.png);
+background-repeat: no-repeat;
+line-height: 40px!important;
+
+}
+
+span.city:hover {
+
+font: 22px ComicSansBold, Arial, sans-serif;
+
+background-image: url(img/pin2.png);
+background-repeat: no-repeat;
+
+}
+
+span.user-status {
+
+background-image: url(img/quotes1.png);
+background-repeat: no-repeat;
+font: 16px Consolaz, Arial, sans-serif;
+padding-left: 25px;
+font-style: italic;
+line-height: 12px!important;
+
+}
+
+span.quotes {
+
+background-image: url(img/quotes2.png);
+background-repeat: no-repeat;
+font: 16px Consolaz, Arial, sans-serif;
+font-style: italic;
+
+}
+span.vk {
+
+background-image: url(img/vk1.png);
+background-repeat: no-repeat;
+padding-top: 15px;
+cursor: pointer;
+
+}
+
+span.fb {
+
+background-image: url(img/fb.png);
+background-repeat: no-repeat;
+padding-top: 15px;
+cursor: pointer;
+
+}
+
+span.gl {
+
+background-image: url(img/gl.png);
+background-repeat: no-repeat;
+padding-top: 15px;
+cursor: pointer;
+
+}
+
+span.tw {
+
+background-image: url(img/tw.png);
+background-repeat: no-repeat;
+padding-top: 15px;
+cursor: pointer;
+
+}
+
+form#subscr {
+
+margin-top: 40px;
+
+}
+
+input#subscr {
+	
+position: relative;
+font-size: 22px;
+display: block;
+padding-top: 0px;
+padding-left: 0px;
+height: 40px;
+margin-top: 0px;
+background-image: url('img/button2.png');
+background-repeat: repeat-x;
+border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+color: white;
+border: none;
+-webkit-appearance: none;
+padding: 5px;
+cursor: pointer;
+
+}
+
+div#top-glider {
+
+position: relative;
+background: #e7e8e8;
+margin-top: 80px;
+margin-bottom: 30px;
+padding-top: 10px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 10px;
+width: 100%;
+height: 80px;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+div.glider-left {
+
+position: absolute;
+display: inline;
+background-image: url('img/glider-left.png');
+background-repeat: no-repeat;
+margin-top: 3px;
+margin-bottom: 0px;
+padding-top: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+width: 47px;
+height: 74px;
+left: 10px;
+cursor: pointer;
+opacity: 0.6;
+
+}
+
+div.glider-left:hover {
+
+opacity: 1;
+
+}
+
+div.glider-right {
+
+position: absolute;
+display: inline;
+background-image: url('img/glider-right.png');
+background-repeat: no-repeat;
+margin-top: 3px;
+margin-bottom: 0px;
+padding-top: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+width: 47px;
+height: 74px;
+right: 10px;
+cursor: pointer;
+opacity: 0.6;
+
+}
+
+div.glider-right:hover {
+
+opacity: 1;
+
+}
+
+div#top-glide {
+
+position: relative;
+padding-top: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+width: 1120px;
+height: 180px;
+overflow-x: hidden;
+
+}
+
+div.polosa {
+
+width: 1109px;
+
+}
+
+div.cat-tags {
+
+position: absolute;
+display: inline;
+background-image: url('img/cat-tags.png');
+background-repeat: repeat-x;
+margin-top: 20px;
+margin-bottom: 0px;
+padding-top: 6px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+width: 1109px;
+height: 50px;
+z-index: 99;
+color: #ffffff;
+font: 18px ComicSansBold, Arial, sans-serif;
+
+}
+
+div#hash-tags {
+
+position: relative;
+padding-top: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+width: 3200px;
+
+overflow-x: hidden;
+
+}
+
+div#hash-tags .tags {
+
+display: inline;
+overflow-x: hidden;
+height: 80px;
+width: 80px;
+margin-left: 5px;
+margin-right: 5px;
+cursor: pointer;
+
+}
+
+div.caption {
+
+position: relative;
+margin-top: 40px;
+margin-bottom: 10px;
+padding-top: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+width: 90%;
+border-top: 2px solid #dbdcdc;
+
+}
+
+div.category {
+
+position: relative;
+width: 270px;
+
+}
+
+div.category h1 {
+
+color: #969696;
+font: 18px ComicSansBold, Arial, sans-serif;
+margin-top: -15px;
+background-color: #f2f2f2;
+
+}
+
+div#menu-pin {
+
+position: relative;
+background-color: #fafafa;
+margin-top: 30px;
+margin-bottom: 0px;
+padding-top: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+width: 100%;
+height: 40px;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+div#menu-boxed {
+
+position: relative;
+margin-top: 30px;
+margin-bottom: 30px;
+margin-left: -30px;
+padding-top: 7px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+width: 100%;
+height: 40px;
+
+}
+
+div#menu-boxed ul {
+
+list-style: none;
+display: inline;
+
+}
+
+div#menu-boxed ul li {
+
+list-style: none;
+display: inline;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 12px;
+padding-bottom: 12px;
+
+}
+
+div#menu-boxed ul li:hover {
+
+color: #555555!important;
+background-color: #eeeeee;
+
+}
+
+div#menu-boxed ul li a {
+
+color: #555555;
+font: 16px ComicSansRegular, Arial, sans-serif;
+text-decoration: none;
+
+}
+
+div#menu-boxed ul li a[code^="Аккаунт"] {
+
+color: red;
+font: 16px ComicSansBold, Arial, sans-serif;
+
+}
+
+div#menu-boxed ul li a b {
+
+color: #3e3e3e;
+font: 16px ComicSansBold, Arial, sans-serif;
+
+}
+
+div#pin-area {
+
+width: 97%;
+text-align: center;
+
+}
+
+section.pin {
+
+width: 200px;
+display: inline-block;
+margin-top: 5px;
+
+/*  нижний отступ между пинами  */
+
+margin-bottom: 10px!important;
+padding: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+color: #555555;
+font: 14px ComicSansRegular, Arial, sans-serif;
+line-height: 12px!important;
+position: relative;
+margin: 0 auto;
+
+}
+
+div.sectionpin {
+
+width: 200px;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+margin: 0px;
+padding: 0px;
+display: block;
+
+}
+
+div.imgpin {
+
+margin-bottom: 8px;
+padding: 0px;
+
+}
+
+div.sectionpin span {
+
+color: #555555;
+font: 14px ComicSansRegular, Arial, sans-serif;
+line-height: 12px!important;
+
+}
+
+a img.sectionpin {
+
+  border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+-moz-border-radius: 5px 5px 0px 0px;
+
+}
+
+div.tagspin {
+
+margin-top: 15px;
+margin-left: -9px;
+margin-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+text-align: center;
+display: block;
+position: relative;
+width: 200px!important;
+
+}
+
+a span {
+
+text-decoration: none!important;
+
+}
+
+div.tagspin a {
+margin: 4px;
+margin-bottom: 7px;
+border-bottom: 1px dashed #969696;
+display: inline-block;
+
+}
+
+div.tagspin a span {
+
+padding: 5px;
+
+color: #969696;
+font: 12px ComicSansRegular, Arial, sans-serif;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+
+}
+
+div.tagspin a:hover {
+
+border-bottom: none;
+
+
+}
+
+div.tagspin a span:hover {
+
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+div.puzomerki {
+
+border-top: 1px solid #d0cfcf;
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 15px;
+margin-left: 7px;
+margin-right: 7px;
+
+}
+
+div.small-like {
+
+margin: 10px;
+padding-top: 5px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 5px;
+background-image: url('img/heart1.png');
+background-repeat: no-repeat;
+display: inline;
+width: 12px;
+height: 30px;
+
+}
+
+div.small-repin {
+
+margin: 10px;
+margin-top: 3px;
+padding-top: 3px;
+padding-left: 3px;
+padding-right: 5px;
+padding-bottom: 5px;
+background-image: url('img/bigpin4.png');
+background-repeat: no-repeat;
+display: inline;
+width: 22px;
+height: 30px;
+
+}
+
+div.small-comment {
+
+margin: 10px;
+padding-top: 5px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 5px;
+background-image: url('img/small-comment.png');
+background-repeat: no-repeat;
+display: inline;
+width: 37px;
+height: 30px;
+
+}
+
+
+
+
+
+
+a {
+
+text-decoration: none!important;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* элементы выпадающего списка. */
+
+select {
+  width: 100px;
+  height: 26px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+  padding: 0px;
+  -webkit-appearance: none;
+  background-image: url('img/select-arrow-pink.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  line-height: 1em;
+  /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px; 
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+}
+ 
+select::-ms-expand {
+  display: none;
+}
+
+/* чекбоксы и радиобуттоны. */
+
+
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox + label {
+  cursor: pointer;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+}
+/* Меняем фон чекбокса, когда он включен. */
+.checkbox:checked + label:before {
+  background: #9FD468;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label:after {
+  left: 26px;
+}
+/* Показываем получение фокуса. */
+.checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+}
+
+/* цвета */
+
+.top-defaul {
+
+color: #FFFFFF;
+background-image: url(img/top-bg.png);
+	
+}
+
+select.pink {
+
+
+
+}
+
+
+
+
+

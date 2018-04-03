@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang='ru'>
+ <head>
+ 
+   <title>
+   
+   
+<?php 
+   
+$uri = $_SERVER['QUERY_STRING'];
+
+$parseURI = explode("?", $_SERVER['REQUEST_URI']);
+
+$parseURL = explode("/", $parseURI[0]);
+
+$url1 = $parseURL[1];
+$url2 = $parseURL[2];
+$url3 = $parseURL[3];
+$url4 = $parseURL[4];
+   
+if ($_SERVER['REQUEST_URI'] != '/'){ 
+   
+if ($url1 == 'all'){
+if ($url2 == 'users'){
+?>
+Все пользователи 
+<?php  
+}
+}  
+   
+elseif ($url1 == 'users'){
+if ($url3 == 'likes'){
+?>
+Лайки пользователя <?php echo $url2; ?>
+<?php 
+}
+
+elseif ($url3 == 'boards'){
+?>
+Альбомы пользователя <?php echo $url2; ?>
+<?php 
+}
+
+elseif ($url3 == 'repins'){
+?>
+Репосты пользователя <?php echo $url2; ?>
+<?php 
+}
+
+elseif ($url3 == 'followers'){
+?>
+Подписчики пользователя <?php echo $url2; ?>
+<?php  
+}
+
+elseif ($url3 == 'followings'){
+?>
+Подписки пользователя <?php echo $url2; ?>
+<?php  
+}
+
+elseif ($url3 == 'account-plus'){
+?>
+Аккаунт+
+<?php 
+}
+
+else {
+?>
+Пользователь <?php echo $url2; ?>
+<?php 
+}
+
+
+} 
+
+elseif ($url1 == 'category'){
+?>
+Категория <?php echo $url2; ?>
+<?php 
+}
+  
+elseif ($url1 == 'tags'){
+?>
+Хэш-тег <?php echo $url2; ?>
+<?php 
+}  
+
+   
+}
+
+else {
+   
+?>
+   
+Pinct | Мир ярких картинок
+
+<?php 
+   
+}
+   
+?>
+   
+   
+   </title>
+   
+   <meta charset='utf-8'>
+   <link rel="icon" href="http://pinct.ru/img/favicon.ico" type="image/x-icon" />
+
+   <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+   
+   <link href='http://pinct.ru/newstyle.css' rel='stylesheet'>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type='text/javascript' src='http://pinct.ru/js/easing.js'></script>
+<script type='text/javascript' src='http://pinct.ru/infinity/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='http://pinct.ru/infinity/jquery.infinitescroll.js'></script>
+<script type='text/javascript' src='http://pinct.ru/js/pinct1-1.js'></script>
+<script type='text/javascript' src='http://pinct.ru/js/pinct2-1.js'></script>
+
+ </head>
+
+<body class='allwidth' id='allbody' onload='loadStart(), start(), loadDark()'>
+
+<div align='center' class='loading-box'>
+<div align='center' class='loading-icon'>
+<img class='loading-icon' src='http://pinct.ru/img/logo-loading.gif' align='bottom' width='212'/>
+</div>
+</div>
+
+
+ 
+<div id='load-view'></div>
+
+<div id='re-img888' class='box-re'>
+
+<div align='center' class='boxed-repin' id='photo-repin'>
+
+aaaaaaaaacefwre
+
+</div>
+  
+</div>
+ 
+<nav id='response-nav' class='navmenu'>
+ 
+<a href='' return='false'><div id='response-show' class='navmenushow'>
+&nbsp;&nbsp;
+
+ <div id='tooltip-menu' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left-top.png' align='left' width='17'/>раскрыть
+</div>
+
+</div>
+
+<div id='response-show2' class='navmenushow2'>
+&nbsp;&nbsp;
+
+ <div id='tooltip-menu' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left-top.png' align='left' width='17'/>свернуть
+</div>
+
+</div></a>
+
+<a href='#' return='false'><div id='response-cat' class='navmenucat'>
+ <i>&nbsp;&nbsp;</i>
+ 
+ 
+ 
+ 
+<?php dataAllCategory(false); ?>
+ 
+<div id='modal-cat' class='modalmenu'>
+ <img src='http://pinct.ru/img/tik-left.png' align='left' width='25'/>
+ 
+ 
+ 
+<div class='leftmodalmenu'>
+ 
+ <ul>
+ 
+ <?php 
+ 
+$l=0;
+for($l=0; $l<=17; $l++) { 
+if (resAllCategoryName($l)) {
+?>
+ 
+ <a class='account' href='http://pinct.ru/category/<?php echo resAllCategoryUrl($l); ?>' 
+
+ <?php  if ($l == 0) { 
+ echo "class='first-el'"; 
+  }
+  if ($l == 17) { 
+echo "class='last-el'"; 
+ } ?>
+
+ return='false'><li>
+<?php echo resAllCategoryName($l); ?>
+ </li></a>
+
+ <?php } } ?>
+ 
+
+ 
+ </ul>
+ 
+ </div>
+ 
+ <div class='centermodalmenu'>
+ 
+ <ul>
+ 
+ <?php 
+ 
+$m=0;
+for($m=18; $m<=35; $m++) { 
+if (resAllCategoryName($m)) {
+?>
+ 
+ <a class='account' href='http://pinct.ru/category/<?php echo resAllCategoryUrl($m); ?>' 
+
+ <?php  if ($m == 18) { 
+ echo "class='first-el'"; 
+  }
+  if ($m == 35) { 
+echo "class='last-el'"; 
+ } ?>
+
+ return='false'><li>
+<?php echo resAllCategoryName($m); ?>
+ </li></a>
+
+ <?php } } ?>
+
+ </ul>
+ 
+ </div>
+ 
+ <div class='rightmodalmenu'>
+ 
+ <ul>      
+
+ <?php 
+ 
+$n=0;
+for($n=36; $n<=rowsAllCategory(); $n++) { 
+if (resAllCategoryName($n)) {
+?>
+ 
+ <a class='account' href='http://pinct.ru/category/<?php echo resAllCategoryUrl($n); ?>' 
+
+ <?php  if ($n == 36) { 
+ echo "class='first-el'"; 
+  }
+  if ($n == rowsAllCategory()) { 
+echo "class='last-el'"; 
+ } ?>
+
+ return='false'><li>
+<?php echo resAllCategoryName($n); ?>
+ </li></a>
+
+ <?php } } ?>
+ 
+ </ul>
+ 
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ <div id='tooltip-menu' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left.png' align='left' width='17'/>категории
+</div>
+ 
+</div></a>
+
+<a href='#' return='false'><div id='response-topp' class='navmenutopp'>
+ &nbsp;&nbsp;
+ 
+   <div id='tooltip-menu2' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left.png' align='left' width='17'/>популярное
+</div>
+ 
+</div></a>
+ 
+<a href='#' return='false'><div id='response-new' class='navmenunew'>
+ &nbsp;&nbsp;
+
+    <div id='tooltip-menu3' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left.png' align='left' width='17'/>новое
+</div>
+ 
+</div></a>
+ 
+<a href='#' return='false'><div id='response-video' class='navmenuvideo'>
+ &nbsp;&nbsp;
+ 
+     <div id='tooltip-menu4' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left.png' align='left' width='17'/>видеоролики
+</div>
+ 
+</div></a>
+
+<a href='#' return='false'><div id='response-hash' class='navmenuhash'>
+<i>&nbsp;&nbsp;</i>
+ 
+ 
+ <div id='modal-hash' class='modalhash'>
+<img src='http://pinct.ru/img/tik-left.png' align='left' width='25'/>
+ 
+ 
+ 
+ <div class='leftmodalhash'>
+ 
+ 
+ <ul>
+ <a href='#' class='first-el' return='false'><li>
+30&nbsp;секунд&nbsp;до&nbsp;Марса
+ </li></a>
+ <a href='#' return='false'><li>
+Воландеморт
+ </li></a>
+  <a href='#' return='false'><li>
+Гарри&nbsp;Поттер
+ </li></a>
+  <a href='#' return='false'><li>
+Джек&nbsp;Воробей
+ </li></a>
+  <a href='#' return='false'><li>
+Котэ
+ </li></a>
+  <a href='#' return='false'><li>
+Кларк&nbsp;Кент
+ </li></a>
+  <a href='#' class='last-el' return='false'><li>
+Гостиная
+ </li></a>
+ </ul>
+ 
+ 
+ 
+ 
+ 
+ 
+ </div>
+ 
+ 
+ 
+ 
+</div>
+ 
+ 
+      <div id='tooltip-menu5' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left.png' align='left' width='17'/>#теги
+</div>
+ 
+</div></a>
+
+<a href='#' return='false'><div id='response-part' class='navmenupart'>
+<i>&nbsp;</i>
+ 
+ <div id='modal-part' class='modalpart'>
+<img src='http://pinct.ru/img/tik-left.png' align='left' width='25'/>
+ 
+ 
+ 
+ <div class='leftmodalpart'>
+ 
+ 
+ <ul>
+ <a href='#' class='first-el' return='false'><li>
+Как&nbsp;стать&nbsp;партнёром?
+ </li></a>
+ <a href='#' return='false'><li>
+Как&nbsp;это&nbsp;работает?
+ </li></a>
+  <a href='#' class='last-el' return='false'><li>
+Как&nbsp;вывести&nbsp;средства?
+ </li></a>
+ </ul>
+ 
+ 
+ </div>
+ 
+</div>
+ 
+ 
+       <div id='tooltip-menu6' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left.png' align='left' width='17'/>заработать!
+</div>
+ 
+</div></a>
+ 
+<a href='#' return='false'><div id='response-about' class='navmenupart'>
+<i>&nbsp;&nbsp;</i>
+ 
+ <div id='modal-about' class='modalabout'>
+<img src='http://pinct.ru/img/tik-left.png' align='left' width='25'/>
+ 
+ 
+ 
+ <div class='leftmodalabout'>
+ 
+ 
+ <ul>
+ <a href='#' class='first-el' return='false'><li>
+Политика&nbsp;приватности
+ </li></a>
+ <a href='#' return='false'><li>
+Миссия&nbsp;проекта
+ </li></a>
+  <a href='#' class='last-el' return='false'><li>
+Контактные&nbsp;данные
+ </li></a>
+ </ul>
+ 
+ 
+ 
+ 
+ 
+ 
+ </div>
+ 
+ 
+ 
+ 
+</div>
+
+
+ 
+        <div id='tooltip-menu7' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left.png' align='left' width='17'/>о&nbsp;сайте
+</div>
+ 
+</div></a>
+
+<a href='#' return='false'><div id='response-help' class='navmenuhelp'>
+<i>&nbsp;&nbsp;</i>
+ 
+ <div id='modal-help' class='modalhelp'>
+<img src='http://pinct.ru/img/tik-left.png' align='left' width='25'/>
+ 
+ 
+ 
+ <div class='leftmodalhelp'>
+ 
+ 
+ <ul>
+ <a href='#' class='first-el' return='false'><li>
+Как&nbsp;зарегистрироваться?
+ </li></a>
+ <a href='#' return='false'><li>
+Как&nbsp;стать&nbsp;партнёром?
+ </li></a>
+  <a href='#' return='false'><li>
+Как&nbsp;оплатить&nbsp;аккаунт+?
+ </li></a>
+ </ul>
+ 
+ 
+ 
+ 
+ 
+ 
+ </div>
+ 
+ 
+ 
+ 
+</div>
+ 
+         <div id='tooltip-menu8' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-left.png' align='left' width='17'/>помощь
+</div>
+ 
+</div></a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</nav>
+ 
+ 
+<header class='top-menu top-defaul' id='menutop'>
+
+<div id='top-left' class='menuleft'>
+
+<div id='boxed-menu' class='boxmenu'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div id='tooltip-menu11' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>открыть&nbsp;меню
+</div>
+
+</div>
+
+<div id='boxed-menu2' class='boxmenu2'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div id='tooltip-menu12' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>скрыть&nbsp;меню
+</div>
+
+</div>
+
+<a class='account' href='http://pinct.ru/all/users' return='false'><div id='menu-users' class='allusers'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+ <div id='tooltip-menu13' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>топ&nbsp;пользователей
+</div>
+
+</div></a>
+
+
+  
+  <div id='top-form' class='searchform'>
+  <form name='form-search' id='search' action='cat.php'>
+  
+  <input type='text' name='search' id='search' placeholder='Поиск по Pinct.ru'>
+  
+  <input type='button' name='image-search' id='image-search' value='OK'>
+  
+  </form>
+  </div>
+  
+</div>
+
+<a href='http://pinct.ru/' class='account' return='false'><div id='top-logo' class='logo'>
+<img class='show' src='http://pinct.ru/img/logo.png' width='85' height='40' alt='Pinct'/>
+<img class='hide' src='http://pinct.ru/img/logo1.png' width='85' height='40' alt='Pinct'/>
+<div id='tooltip-menu14' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>на&nbsp;главную
+</div>
+</div></a>
+
+<div id='box-right' class='allright'>
+
+<div id='top-right' class='menuright'>
+
+<div id='top-sort' class='menusort'>
+
+  <select class='menuleft' size='1' name='sort'>
+
+    <option>Популярное</option>
+	<option>Новое</option>
+	<option>Старое</option>
+	<option>по алфавиту</option>
+
+   </select>
+
+</div>
+
+<a href='' return='false'><div id='top-plus' class='pplus'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div id='top-plus-nav' class='topplusmenu'>
+<img src='http://pinct.ru/img/tik-top.png' align='center' width='20'/>добавить
+
+<div id='top-plus-text'>
+
+<ul>
+ <a href='#' class='account' return='false'><li>
+Из&nbsp;интернета
+ </li></a>
+ <a href='#' class='account' return='false'><li>
+С&nbsp;компьютера
+ </li></a>
+  <a href='#' class='account last-el' return='false'><li>
+Альбом
+ </li></a>
+ </ul>
+
+</div>
+
+
+</div>
+
+<div id='tooltip-menu15' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>добавить
+</div>
+
+</div></a>
+
+<a href='' return='false'><div id='plus-user' class='userplus'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<div id='plus-nav' class='plusmenu'>
+<img src='http://pinct.ru/img/tik-top.png' align='center' width='20'/>пользователи
+
+<div id='plus-text'>
+
+<ul>
+ <a href='#' class='account' return='false'><li>
+Пользователь&nbsp;#1
+ </li></a>
+ <a href='#' class='account' return='false'><li>
+Пользователь&nbsp;#2
+ </li></a>
+  <a href='#' class='account last-el' return='false'><li>
+Пользователь&nbsp;#3
+ </li></a>
+ </ul>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div id='tooltip-menu16' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>добавить&nbsp;пользователей
+</div>
+
+</div></a>
+
+<a href='' return='false'><div id='top-messages' class='messages'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<div id='natif-nav' class='natifmenu'>
+<img src='http://pinct.ru/img/tik-top.png' align='center' width='20'/>уведомления
+
+<div id='natif-text'>
+
+<ul>
+ <a href='#' class='account' return='false'><li>
+Уведомление&nbsp;#1
+ </li></a>
+ <a href='#' class='account' return='false'><li>
+Уведомление&nbsp;#2
+ </li></a>
+  <a href='#' class='account last-el' return='false'><li>
+Уведомление&nbsp;#3
+ </li></a>
+ </ul>
+
+</div>
+
+</div>
+
+
+
+
+
+<div id='tooltip-menu17' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>уведомления
+</div>
+
+</div></a>
+
+<a href='' return='false'><div id='top-emal' class='send-emal'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div id='emal-nav' class='emal-menu3'>
+<img src='http://pinct.ru/img/tik-top.png' align='center' width='20'/>сообщения
+
+<div id='emal-text'>
+
+<ul>
+ <a href='#' class='account' return='false'><li>
+Сообщение&nbsp;#1
+ </li></a>
+ <a href='#' class='account' return='false'><li>
+Сообщение&nbsp;#2
+ </li></a>
+  <a href='#' class='account last-el' return='false'><li>
+Сообщение&nbsp;#3
+ </li></a>
+ </ul>
+
+</div>
+
+
+</div>
+
+<div id='tooltip-menu17' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>сообщения
+</div>
+
+
+</div></a>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div id='right-chat' class='menuchat'>
+
+<div id='top-chat' class='chat'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div id='tooltip-menu17' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>чат
+</div>
+
+</div>
+
+<div id='top-chat2' class='chat2'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div id='tooltip-menu12' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>скрыть&nbsp;чат
+</div>
+
+</div>
+
+</div>
+
+
+
+<div id='right-right' class='menuright2'>
+
+<div id='top-account' class='account'>
+<img class='img-nav' src='http://pinct.ru/img/100.jpg' align='right' width='44' alt='user'/>
+
+
+<div id='account-nav' class='account-menu3'>
+<img src='http://pinct.ru/img/tik-top.png' align='center' width='20'/>профиль
+
+<div id='account-text'>
+
+<ul>
+ <a href='http://pinct.ru/users/scanderberg' class='account' return='false'><li>
+Мои&nbsp;посты
+ </li></a>
+ <a href='http://pinct.ru/users/scanderberg/boards' class='account' return='false'><li>
+Мои&nbsp;доски
+ </li></a>
+ <a href='http://pinct.ru/users/scanderberg/likes' class='account' return='false'><li>
+Мои&nbsp;лайки
+ </li></a>
+ <a href='http://pinct.ru/users/scanderberg/followers' class='account' return='false'><li>
+Подписчики
+ </li></a>
+ <a href='http://pinct.ru/users/scanderberg/followings' class='account' return='false'><li>
+Последователи
+ </li></a>
+ <a href='http://pinct.ru/users/scanderberg/account-plus' class='account' return='false'><li>
+Аккаунт+
+ </li></a>
+ <a href='http://pinct.ru/settings' class='account' return='false'><li>
+Настройки
+ </li></a>
+  <a href='http://pinct.ru/logout' class='account last-el' return='false'><li>
+Выйти
+ </li></a>
+ </ul>
+
+</div>
+
+
+</div>
+
+<div id='tooltip-menu17' class='navtooltip'>
+ <img src='http://pinct.ru/img/tik-menu-top.png' align='left' width='17'/>профиль
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+</header>

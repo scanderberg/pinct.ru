@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8' />
+  <title>Page 2 &middot; jQuery Masonry</title>
+  
+<script type='text/javascript' src='http://pinct.ru/infinity/jquery-1.6.1.min.js'></script>
+
+<script type='text/javascript'>
+function dispMes(event)
+{
+event = event || window.event;
+document.getElementById('par').style.display='block';
+document.getElementById('resultx').innerHTML=event.clientX;
+document.getElementById('resulty').innerHTML=event.clientY;
+document.getElementById('screenx').innerHTML=event.screenX;
+document.getElementById('screeny').innerHTML=event.screenY;
+document.getElementById('pagx').innerHTML=event.pageX;
+document.getElementById('pagy').innerHTML=event.pageY;
+
+
+
+	if (event.pageX == null && event.clientX != null ) { 
+		var html = document.documentElement;
+		var body = document.body;
+	
+		event.pageX = event.clientX + (html && html.scrollLeft || body && body.scrollLeft || 0) - (html.clientLeft || 0)
+		event.pageY = event.clientY + (html && html.scrollTop || body && body.scrollTop || 0) - (html.clientTop || 0)
+	}
+	
+	document.getElementById('pagx').value = event.pageX;
+	document.getElementById('pagy').value = event.pageY;
+
+}
+  </script> 
+  
+</head>
+<body>
+  
+<div id='block' onclick='dispMes(event)'><p>Щелкните в любом месте правого окна редактора.</p>
+<p id='par' style='display:none;'>От клиента<br />
+<b><span id='resultx'> </span></b> пикс. по горизонтали<br />
+<b><span id='resulty'> </span></b> пикс. по вертикали<br />
+От окна<br />
+<b><span id='screenx'> </span></b> пикс. по горизонтали<br />
+<b><span id='screeny'> </span></b> пикс. по вертикали<br />
+От документа<br />
+<b><span id='pagex'> </span></b> пикс. по горизонтали<br />
+<b><span id='pagey'> </span></b> пикс. по вертикали
+</p>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+
+
+</body>
+</html>
